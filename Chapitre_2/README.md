@@ -69,7 +69,7 @@ Voici un modèle de **cahier des charges** structuré pour un portfolio de déve
    - **Couleur d'accent** : Orange ou une couleur vive pour mettre en valeur des éléments spécifiques comme les boutons ou les liens importants.
 
 #### Typographie :
-   - **Police principale** : "Roboto" ou "Open Sans" (facile à lire et moderne).
+   - **Police principale** : "Roboto" ou "Open Sans" (facile à lire et moderne). (Rubik Mono One, Tektur)
    - **Police secondaire** : "Montserrat" ou "Lora" (pour les titres et les sections importantes, avec plus de caractère).
 
 ---
