@@ -1,0 +1,28 @@
+:root{
+    --primary-color: aqua;
+    --primary-font: "Roboto";
+}
+
+nav ul{
+    list-style: none;    
+    display: flex;
+    gap: 20px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font);
+}
+
+.smart{
+    display: flex;
+    justify-content: center;
+}
