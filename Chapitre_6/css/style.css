@@ -6,16 +6,13 @@
 
 body{
     background-color: var(--background-color);
+    font-family: var(--primary-font);
+    font-size: large;
 }
 nav ul{
     list-style: none;    
     display: flex;
     gap: 20px;
-}
-
-h1{
-    display: flex;
-    justify-content: right;
 }
 
 section{
@@ -35,4 +32,5 @@ p{
 footer{
     display: flex;
     justify-content: flex-end;
+    font-size: medium;
 }
