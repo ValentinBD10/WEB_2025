@@ -22,7 +22,7 @@ p{
     font-family: var(--primary-font);
 }
 
-.smart{
+footer{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
