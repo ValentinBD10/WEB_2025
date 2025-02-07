@@ -1,12 +1,21 @@
 :root{
-    --primary-color: aqua;
+    --primary-color: #418FBF;
+    --background-color: #F2F2F2;
     --primary-font: "Roboto";
 }
 
+body{
+    background-color: var(--background-color);
+}
 nav ul{
     list-style: none;    
     display: flex;
     gap: 20px;
+}
+
+h1{
+    display: flex;
+    justify-content: right;
 }
 
 section{
@@ -14,7 +23,7 @@ section{
     justify-content: center;
     flex-wrap: wrap;
     background-color: var(--primary-color);
-    margin: 20px;
+    margin: 0px 600px 0px;
 }
 
 p{
