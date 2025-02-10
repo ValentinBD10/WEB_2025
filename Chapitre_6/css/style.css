@@ -9,6 +9,7 @@ body{
     font-family: var(--primary-font);
     font-size: large;
 }
+
 nav ul{
     list-style: none;    
     display: flex;
@@ -18,6 +19,11 @@ nav ul{
 section{
     display: flex;
     justify-content: center;
+}
+
+main{
+    height: 80vh;
+    width: 100%;
 }
 
 p{
@@ -33,8 +39,6 @@ h2{
 }
 
 footer{
-    display: flex;
-    justify-content: center;
     font-size: medium;
 }
 
