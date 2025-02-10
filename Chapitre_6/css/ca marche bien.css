@@ -18,13 +18,13 @@ nav ul{
 section{
     display: flex;
     justify-content: center;
-    /*background-color: var(--primary-color);
-    margin: 0px 600px 0px;*/
 }
 
 p{
     display: flex;
     justify-content: center;
+    background-color: var(--primary-color);
+    margin: 0px 600px 0px;
 }
 
 h2{
