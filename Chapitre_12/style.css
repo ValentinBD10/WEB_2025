@@ -2,11 +2,15 @@ main{
     background-image: url("restaurant_locaux.jpg");
 }
 
+.degradevert{
+    background-color:#E5FADF;
+}
+
 .text-box {
     display: none;
     position: relative;
-    bottom: 20px;
-    right: 20px;
+    text-align: center;
+    margin: 10px 200px 20px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 20px;
