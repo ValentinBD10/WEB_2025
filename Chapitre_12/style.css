@@ -1,4 +1,4 @@
-main{
+.acceuilmain{
     background-image: url("restaurant_locaux.jpg");
 }
 
@@ -21,3 +21,7 @@ main{
   .text-box.show {
     display: block;
   }
+
+.bg-or{
+    background-color: #ECBF00;
+}
