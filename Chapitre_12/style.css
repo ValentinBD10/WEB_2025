@@ -2,6 +2,10 @@
     background-image: url("restaurant_locaux.jpg");
 }
 
+.menumain{
+    background-image: url("bois-texture.jpg");
+}
+
 .degradevert{
     background-color:#E5FADF;
 }
@@ -22,6 +26,32 @@
     display: block;
   }
 
-.bg-or{
+.dispo-menu{
+    margin: 50px 200px;
+    border: solid;
     background-color: #ECBF00;
+}
+
+.font-text{
+    font-size: larger;
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-title{
+    text-decoration: underline;
+}
+
+.big{
+    font-size: x-large;
+}
+
+.x-big{
+    font-size: xx-large;
+}
+
+.becenter{
+    text-align: center;
+}
+.menuborder{
+    border: solid;
 }
