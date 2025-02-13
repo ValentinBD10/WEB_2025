@@ -52,6 +52,14 @@
 .becenter{
     text-align: center;
 }
+
 .menuborder{
     border: solid;
+}
+
+footer{
+    background-color: #454545;
+    color:rgb(0, 85, 255);
+    font-size: x-large;
+    text-align: center;
 }
