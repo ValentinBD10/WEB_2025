@@ -1,0 +1,12 @@
+.white-box{
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    height: 600px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    flex-direction: column;
+    margin-top: 3%;
+}
