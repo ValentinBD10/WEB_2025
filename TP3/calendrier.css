@@ -10,3 +10,79 @@
     flex-direction: column;
     margin-top: 3%;
 }
+
+body{
+    background-color: #F2F2F2;
+}
+
+.ChangeDateTitle{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+.grey-box{
+    display: flex;
+    justify-content: left;
+    background-color: #F2F2F2;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 90%;
+    height: 500px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.NavButtons{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 5%;
+    font-weight: normal;
+}
+
+.NavButtons h1{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.horizontalLine{
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+}
+
+.Days{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 3px;
+    font-weight: normal;
+}
+
+.Day{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 3px;
+    font-weight: normal;
+}
+
+.Day button{
+    background-color: rgb(172,171,171);
+    border-radius: 5px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.Day h1{
+    text-align: center;
+}
