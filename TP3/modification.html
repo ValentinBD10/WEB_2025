@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier les Informations Personnelles</title>
+    <link rel="stylesheet" href="chatgpt.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modifier les Informations Personnelles</h1>
+        <form id="updateForm">
+            <label for="firstName">Prénom:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Nom:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="dob">Date de Naissance:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="address">Adresse:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Numéro de Téléphone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Mettre à jour</button>
+        </form>
+
+        <h2>Supprimer le compte</h2>
+        <button id="deleteAccount">Supprimer mon compte</button>
+    </div>
+
+    <script src="chatgpt.js"></script>
+</body>
+</html>
