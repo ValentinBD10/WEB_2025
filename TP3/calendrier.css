@@ -1,3 +1,7 @@
+.navbarstyle{
+    justify-content: space-around;
+}
+
 .white-box{
     display: flex;
     justify-content: left;
