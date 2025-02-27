@@ -12,7 +12,7 @@
     <main>
         <div class="form-container">
             <h2>Création</h2>
-            <form id="creation" action="creation.php" method="post">
+            <form action="creation.php" method="post">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required>
 
@@ -34,31 +34,19 @@
                 <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="button" >Envoyer</button>
+                <button>Envoyer</button>
             </form>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        function submitForm() {
-            // Récupérer les valeurs du formulaire
-            var nom = document.getElementById('nom').value;
-            var prenom = document.getElementById('prenom').value;
-            var date = document.getElementById('date').value;
-            var adresse = document.getElementById('adresse').value;
-            var telephone = document.getElementById('telephone').value;
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            
+        document.addEventListener("DOMContentLoaded", function() {
+            var referrer = document.referrer;
 
-            // Vérifier que tous les champs sont remplis
-            if (nom && prenom && date && adresse && telephone && email && password) {
-                // Afficher une alerte de confirmation
-                alert("La création est réussi !\n\nNom: " + nom + "\nEmail: " + email + "\nTéléphone: " + telephone + "\nDate: " + date);
-            } else {
-                alert("Veuillez remplir tous les champs.");
+            if (referrer.includes("creation.html")) {
+                alert("mail existant");
             }
-        }
+        });
     </script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>

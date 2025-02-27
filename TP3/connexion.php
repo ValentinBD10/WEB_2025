@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 header("Location: mesrdv.html");
             }
             else{
-                alert("Le mot de passe est faux");
+                header("Location: connexion.html");
             }
         }
         else{
-            alert("L'email est faux");
+            header("Location: connexion.html");
         }
     }
 }

@@ -9,10 +9,15 @@
     <title>Connexion</title>
 </head>
 <body>
+    <header>
+        <div id="erreur" class="p-3 mb-2 bg-secondary text-white">
+            <p class="d-flex justify-content-center">Bonjour</p>
+        </div>
+    </header>
     <main>
         <div class="form-container">
             <h2>Connexion</h2>
-            <form id="connexion" action="connexion.php" method="POST">
+            <form action="connexion.php" method="post">
 
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" required>
@@ -20,9 +25,20 @@
                 <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="button">Envoyer</button>
+                <button>Envoyer</button>
             </form>
         </div>
     </main>
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var referrer = document.referrer;
+            var contentDiv = document.getElementById("erreur");
+
+            if (referrer.includes("connexion.html")) {
+                contentDiv.innerHTML = "<p class='d-flex justify-content-center'>L'email ou le mot de passe est mauvais</p>";
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

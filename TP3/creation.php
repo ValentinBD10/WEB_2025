@@ -7,7 +7,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $ADRESSE = $_POST["adresse"];
     $TEL = $_POST["telephone"];
     $EMAIL = $_POST["email"];
-    $PWD = $_POST["password"];
+    $PWD = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+    require_once('config.php');
+    $squery="select * from users";
+    $where = mysqli_query($con,$squery);
+    while($donnee=mysqli_fetch_assoc($where))
+    {
+        $BEMAIL = $donnee["email"];
+
+        if($EMAIL == $BEMAIL)
+        {
+            header("Location: creation.html");
+        }
+    }
 
     try {
         require_once "dbh.php";
