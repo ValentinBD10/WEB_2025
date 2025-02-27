@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         if($UEMAIL == $BEMAIL)
         {
             $PWD = $_POST["password"];
-            $HASH = $donnee["pwd"];
+            $HASH = $donnee["password"];
             
             if (password_verify($PWD, $HASH)){
                 header("Location: mesrdv.html");
