@@ -15,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $HASH = $donnee["password"];
             
             if (password_verify($PWD, $HASH)){
-                header("Location: mesrdv.html");
+                $USER = $donnee["user_id"];
+                header("Location: mesrdv.php?user=' . urlencode($USER)");
             }
             else{
                 header("Location: connexion.html");

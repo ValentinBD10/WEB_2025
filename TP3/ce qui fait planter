@@ -1,0 +1,21 @@
+<?php
+    try {
+        require_once "dbh.php";
+        
+        $query = "INSERT INTO user_data (user_id, jour, heure) VALUES (?, ?, ?);";
+    
+        $stmt = $pdo->prepare($query);
+    
+        $stmt->execute([$USER, $_GET["numero"], "20:00"]);
+        
+        $pdo = null;
+    
+        $stmt = null;
+    
+        header("Location: mesrdv.php");
+        die();
+    }
+    catch (PDOException $e) {
+        die("Query failed : " . $e->getMessage());
+    }
+?>

@@ -30,12 +30,17 @@ $table = mysqli_query($con,$fquery);
     <title>Réservation</title>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <a href="calendrier.php">Ajoutez un rendez-vous</a>
+        </div>
+    </header>
     <div class="container">
         <div class="row mt-5">
             <div class="col">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h2 class="display-6 text-center">Password list</h2>
+                        <h2 class="display-6 text-center">Réservation</h2>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered text-center">
@@ -48,14 +53,16 @@ $table = mysqli_query($con,$fquery);
                             <?php
                             while($row=mysqli_fetch_assoc($table))
                             {
-                                if($row['user_id'] == $USER)
-                                {
-                                    ?>
-                                    <td><?php echo $row['jour']; ?></td>
-                                    <td><?php echo $row['heure']; ?></td>
-                                    <td><a href="annulation.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Annuler</a></td>
-                                    </tr>
-                                    <?php
+                                if (isset($_GET['user'])) {
+                                    if($row['user_id'] == $_GET['user'])
+                                    {
+                                        ?>
+                                        <td><?php echo $row['jour']; ?></td>
+                                        <td><?php echo $row['heure']; ?></td>
+                                        <td><a href="annulation.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Annuler</a></td>
+                                        </tr>
+                                        <?php
+                                    }
                                 }
                             }
                             ?>
