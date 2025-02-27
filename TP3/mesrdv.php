@@ -26,7 +26,7 @@ $table = mysqli_query($con,$fquery);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Réservation</title>
 </head>
 <body>
@@ -53,17 +53,14 @@ $table = mysqli_query($con,$fquery);
                             <?php
                             while($row=mysqli_fetch_assoc($table))
                             {
-                                if (isset($_GET['user'])) {
-                                    if($row['user_id'] == $_GET['user'])
-                                    {
-                                        ?>
-                                        <td><?php echo $row['jour']; ?></td>
-                                        <td><?php echo $row['heure']; ?></td>
-                                        <td><a href="annulation.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Annuler</a></td>
-                                        </tr>
-                                        <?php
-                                    }
-                                }
+                                
+                                ?>
+                                <td><?php echo $row['jour']; ?></td>
+                                <td><?php echo $row['heure']; ?></td>
+                                <td><button href="annulation.php" class="btn btn-danger">Annuler</button></td>
+                                </tr>
+                                <?php
+                                    
                             }
                             ?>
                         </table>
