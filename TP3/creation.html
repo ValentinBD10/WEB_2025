@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
-    <link href="creation.css" rel="stylesheet">
+    <link href="compte.css" rel="stylesheet">
     <title>Création de compte</title>
 </head>
 <body>
     <main>
         <div class="form-container">
             <h2>Création</h2>
-            <form id="creation" action="creation.php" method="POST">
+            <form id="creation" action="creation.php" method="post">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required>
 
@@ -34,7 +34,7 @@
                 <label for="password">Mot de passe :</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="button" onclick="submitForm()">Envoyer</button>
+                <button type="button" >Envoyer</button>
             </form>
         </div>
     </main>
@@ -54,7 +54,7 @@
             // Vérifier que tous les champs sont remplis
             if (nom && prenom && date && adresse && telephone && email && password) {
                 // Afficher une alerte de confirmation
-                alert("Votre réservation a été envoyée !\n\nNom: " + nom + "\nEmail: " + email + "\nTéléphone: " + telephone + "\nNombre de personnes: " + nombre + "\nDate: " + date + "\nHeure: " + heure);
+                alert("La création est réussi !\n\nNom: " + nom + "\nEmail: " + email + "\nTéléphone: " + telephone + "\nDate: " + date);
             } else {
                 alert("Veuillez remplir tous les champs.");
             }
