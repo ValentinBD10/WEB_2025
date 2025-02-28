@@ -38,7 +38,7 @@ $table = mysqli_query($con,$fquery);
             <a class="navbar-brand" href="deconnexion.php"><i class="fa-solid fa-power-off"></i></a>
         </div>
         <div class="container">
-            <a href="calendrier.php">Ajoutez un rendez-vous</a>
+            <a href="reservation.php">Ajoutez un rendez-vous</a>
         </div>
     </header>
     <div class="container">
