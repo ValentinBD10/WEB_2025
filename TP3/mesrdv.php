@@ -64,7 +64,7 @@ $table = mysqli_query($con,$fquery);
                                     ?>
                                     <td><?php echo $row['date']; ?></td>
                                     <td><?php echo $row['heure']; ?></td>
-                                    <td><button href="annulation.php" class="btn btn-danger">Annuler</button></td>
+                                    <td><a href="annulation.php?id=<?php echo $row['data_id'];?>" class="btn btn-danger">Annuler</a></td>
                                     </tr>
                                     <?php
                                 }
