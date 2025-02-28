@@ -47,7 +47,7 @@
             var contentDiv = document.getElementById("erreur");
 
             if (referrer.includes("connexion.html")) {
-                contentDiv.innerHTML = "<p class='d-flex justify-content-center'>L'email ou le mot de passe est mauvais</p>";
+                contentDiv.textContent = "L'email ou le mot de passe est mauvais";
             }
         });
     </script>
