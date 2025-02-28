@@ -1,12 +1,14 @@
 <?php
+    session_start();
+    
     try {
         require_once "dbh.php";
         
-        $query = "INSERT INTO user_data (user_id, jour, heure) VALUES (?, ?, ?);";
+        $query = "INSERT INTO user_data (user_id, date, heure) VALUES (?, ?, ?);";
     
         $stmt = $pdo->prepare($query);
     
-        $stmt->execute([$USER, $_GET["numero"], "20:00"]);
+        $stmt->execute([$_SESSION['user'], $_SESSION['date'], "20:00"]);
         
         $pdo = null;
     

@@ -1,7 +1,5 @@
 <?php
-if (isset($_GET['user'])) {
-    $USER = $_GET['user'];
-} 
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +30,6 @@ if (isset($_GET['user'])) {
                 <script>
                     function afficherNumeroBouton(numero) {
                         // Crée une nouvelle page avec le numéro du bouton
-                        
                         var nouvellePage = window.open("", "_blank");
                         nouvellePage.document.write("<h1>Vous avez réservé pour le " + numero + "</h1>");
                     }

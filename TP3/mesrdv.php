@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('config.php');
 $fquery="select * from user_data";
 $table = mysqli_query($con,$fquery);
@@ -50,7 +51,7 @@ $table = mysqli_query($con,$fquery);
                     <div class="card-body">
                         <table class="table table-bordered text-center">
                             <tr class="bg-dark text-white">
-                                <td>Jour</td>
+                                <td>Date</td>
                                 <td>Heure</td>
                                 <td>Annulation</td>
                             </tr>
@@ -58,14 +59,15 @@ $table = mysqli_query($con,$fquery);
                             <?php
                             while($row=mysqli_fetch_assoc($table))
                             {
-                                
-                                ?>
-                                <td><?php echo $row['jour']; ?></td>
-                                <td><?php echo $row['heure']; ?></td>
-                                <td><button href="annulation.php" class="btn btn-danger">Annuler</button></td>
-                                </tr>
-                                <?php
-
+                                if($row['user_id'] == $_SESSION['user'])
+                                {
+                                    ?>
+                                    <td><?php echo $row['date']; ?></td>
+                                    <td><?php echo $row['heure']; ?></td>
+                                    <td><button href="annulation.php" class="btn btn-danger">Annuler</button></td>
+                                    </tr>
+                                    <?php
+                                }
                             }
                             ?>
                         </table>
