@@ -1,33 +1,56 @@
 <?php
-require_once('config.php');
-$squery="select * from users";
-$where = mysqli_query($con,$squery);
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    while($donnee=mysqli_fetch_assoc($where))
-    {
-        $UEMAIL = $_POST["email"];
-        $BEMAIL = $donnee["email"];
+    session_start();
 
-        if($UEMAIL == $BEMAIL)
-        {
-            $PWD = $_POST["password"];
-            $HASH = $donnee["password"];
-            
-            if (password_verify($PWD, $HASH)){
-                $USER = $donnee["user_id"];
-                header("Location: mesrdv.php?user=' . urlencode($USER)");
-            }
-            else{
-                header("Location: connexion.html");
-            }
+    function generateCsrfToken() {
+        if (empty($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         }
-        else{
-            header("Location: connexion.html");
-        }
+        return $_SESSION['csrf_token'];
     }
-}
-else{
-    header("Location: connexion.html");
-}
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link href="compte.css" rel="stylesheet">
+    <title>Connexion</title>
+</head>
+<body>
+    <header>
+        <div id="erreur" class="p-3 mb-2 bg-secondary text-white">
+            <p class="d-flex justify-content-center">Bonjour</p>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Connexion</h2>
+            <form action="connexion_serveur.php" method="post">
+
+                <input type="hidden" name="csrf_token" value="<?php echo generateCsrfToken(); ?>">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+
+                <button>Envoyer</button>
+            </form>
+        </div>
+    </main>
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var referrer = document.referrer;
+            var contentDiv = document.getElementById("erreur");
+
+            if (referrer.includes("connexion.html")) {
+                contentDiv.innerHTML = "<p class='d-flex justify-content-center'>L'email ou le mot de passe est mauvais</p>";
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

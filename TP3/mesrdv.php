@@ -27,10 +27,15 @@ $table = mysqli_query($con,$fquery);
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <title>Réservation</title>
 </head>
 <body>
     <header>
+        <div class="navbarstyle">
+            <a class="navbar-brand" href="modification.html"><i class="fa-solid fa-gear"></i></a>
+            <a class="navbar-brand" href="deconnexion.php"><i class="fa-solid fa-power-off"></i></a>
+        </div>
         <div class="container">
             <a href="calendrier.php">Ajoutez un rendez-vous</a>
         </div>
@@ -60,7 +65,7 @@ $table = mysqli_query($con,$fquery);
                                 <td><button href="annulation.php" class="btn btn-danger">Annuler</button></td>
                                 </tr>
                                 <?php
-                                    
+
                             }
                             ?>
                         </table>
