@@ -7,11 +7,11 @@ import toast from "react-hot-toast";
 import { Card, CardContent } from "./ui/card";
 import Link from "next/link";
 import { Avatar, AvatarImage } from "./ui/avatar";
-import { DeleteAlertDialog } from "./deletealertdialoog";
 import { formatDistanceToNow } from "date-fns";
 import { Button } from "./ui/button";
 import { HeartIcon, LogInIcon, MessageCircleIcon, SendIcon } from "lucide-react";
 import { Textarea } from "./ui/textarea";
+import { DeleteAlertDialog } from "./deletealertdialog";
 
 type Posts = Awaited<ReturnType<typeof getPosts>>;
 type Post = Posts[number];
