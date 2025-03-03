@@ -156,7 +156,7 @@ export async function createComment(postId: string, content: string) {
     if (!post) throw new Error("Post not found");
 
     // Create comment and notification in a transaction
-    const [comment] = await prisma.$transaction(async (tx) => {
+    const [comment] = await prisma.$transaction(async (tx: { comment: { create: (arg0: { data: { content: string; authorId: any; postId: string; }; }) => any; }; notification: { create: (arg0: { data: { type: string; userId: any; creatorId: any; postId: string; commentId: any; }; }) => any; }; }) => {
       // Create comment first
       const newComment = await tx.comment.create({
         data: {
