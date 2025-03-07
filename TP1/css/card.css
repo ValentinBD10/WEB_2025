@@ -28,6 +28,11 @@
   background-size: cover;
 }
 
+.type5{
+  background-image: url(../img/reseau.png);
+  background-size: cover;
+}
+
 .info {
     position: relative;
     width: 100%;
