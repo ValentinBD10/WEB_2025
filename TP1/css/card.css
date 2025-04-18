@@ -38,6 +38,11 @@
   background-size: cover;
 }
 
+.type7{
+  background-image: url(../img/Docker-logo.jpg);
+  background-size: cover;
+}
+
 .info {
     position: relative;
     width: 100%;
